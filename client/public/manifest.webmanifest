@@ -1,0 +1,11 @@
+{
+  "name": "BorrowBuddy – Borrow Instead of Buy",
+  "short_name": "BorrowBuddy",
+  "description": "Borrow what you need from students nearby.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f6f0",
+  "theme_color": "#145e51",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

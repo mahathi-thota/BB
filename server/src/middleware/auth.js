@@ -1,0 +1,2 @@
+import jwt from 'jsonwebtoken'; import {User} from '../models/index.js'; import {config} from '../config/index.js';
+export async function auth(req,res,next){try{const token=req.cookies?.token||req.headers.authorization?.replace(/^Bearer /,'');if(!token)throw new Error('Authentication required');const {id}=jwt.verify(token,config.jwtSecret);req.user=await User.findById(id);if(!req.user)throw new Error('Authentication required');next();}catch{res.status(401).json({success:false,message:'Please log in to continue'});}}
